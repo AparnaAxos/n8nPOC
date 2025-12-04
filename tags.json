@@ -1,0 +1,86 @@
+{
+  "tags": [
+    {
+      "id": "EFQcD8NwVkTGW5XO",
+      "name": "SharePoint"
+    },
+    {
+      "id": "EvtEBg9ixR60utnu",
+      "name": "Reporting"
+    },
+    {
+      "id": "9m2dyB7Sf1MdWXi2",
+      "name": "fail case create does wo"
+    },
+    {
+      "id": "QGGJLRuaGGR3MfLv",
+      "name": "working version"
+    },
+    {
+      "id": "5I1isf0rBUS77r1N",
+      "name": "broken 112025"
+    },
+    {
+      "id": "zetJkKjY7rG1Cu23",
+      "name": "OCR Processing Version"
+    },
+    {
+      "id": "BQnB9cGUYxJujxIb",
+      "name": "Batch Failure Handling"
+    },
+    {
+      "id": "crsa68kJKVxJSd1a",
+      "name": "Fixed Batch Processing"
+    }
+  ],
+  "mappings": [
+    {
+      "workflowId": "hM2FEzpWSNepa4c1",
+      "tagId": "EFQcD8NwVkTGW5XO"
+    },
+    {
+      "workflowId": "hM2FEzpWSNepa4c1",
+      "tagId": "EvtEBg9ixR60utnu"
+    },
+    {
+      "workflowId": "RPv2xTA72zWiVFmR",
+      "tagId": "QGGJLRuaGGR3MfLv"
+    },
+    {
+      "workflowId": "BfoQ7CT2eilLIGa6",
+      "tagId": "QGGJLRuaGGR3MfLv"
+    },
+    {
+      "workflowId": "txuispx54ujloT1f",
+      "tagId": "QGGJLRuaGGR3MfLv"
+    },
+    {
+      "workflowId": "B9GqSmq6z0RiPjSt",
+      "tagId": "5I1isf0rBUS77r1N"
+    },
+    {
+      "workflowId": "4kYf47oZUS8IkgvM",
+      "tagId": "QGGJLRuaGGR3MfLv"
+    },
+    {
+      "workflowId": "4kYf47oZUS8IkgvM",
+      "tagId": "zetJkKjY7rG1Cu23"
+    },
+    {
+      "workflowId": "zbbv2wdLaP8IE6SS",
+      "tagId": "BQnB9cGUYxJujxIb"
+    },
+    {
+      "workflowId": "zbbv2wdLaP8IE6SS",
+      "tagId": "crsa68kJKVxJSd1a"
+    },
+    {
+      "workflowId": "iqhmTQyMbDgFdqXO",
+      "tagId": "QGGJLRuaGGR3MfLv"
+    },
+    {
+      "workflowId": "iqhmTQyMbDgFdqXO",
+      "tagId": "zetJkKjY7rG1Cu23"
+    }
+  ]
+}

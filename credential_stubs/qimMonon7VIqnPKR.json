@@ -1,0 +1,16 @@
+{
+  "id": "qimMonon7VIqnPKR",
+  "name": "IMAP account",
+  "type": "imap",
+  "data": {
+    "user": "",
+    "password": "",
+    "host": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

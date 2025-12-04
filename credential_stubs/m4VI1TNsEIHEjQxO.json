@@ -1,0 +1,14 @@
+{
+  "id": "m4VI1TNsEIHEjQxO",
+  "name": "OpenAi account",
+  "type": "openAiApi",
+  "data": {
+    "apiKey": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "wqrf7g5LE70Y6l4K",
+    "projectName": "andrey Zagoruiko <andrii.zagoruiko@axosbank.com>",
+    "personalEmail": "andrii.zagoruiko@axosbank.com"
+  }
+}

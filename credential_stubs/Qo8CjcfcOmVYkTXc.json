@@ -1,0 +1,17 @@
+{
+  "id": "Qo8CjcfcOmVYkTXc",
+  "name": "SMTP account",
+  "type": "smtp",
+  "data": {
+    "user": "",
+    "password": "",
+    "host": "",
+    "port": 587
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

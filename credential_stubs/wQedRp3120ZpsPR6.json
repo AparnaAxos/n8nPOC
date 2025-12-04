@@ -1,0 +1,16 @@
+{
+  "id": "wQedRp3120ZpsPR6",
+  "name": "Salesforce account",
+  "type": "salesforceOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "environment": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "z8VJT4TelbVg66OM",
+    "projectName": "Ethan Stallings <estallings@axosbank.com>",
+    "personalEmail": "estallings@axosbank.com"
+  }
+}

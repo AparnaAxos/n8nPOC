@@ -1,0 +1,17 @@
+{
+  "id": "8J3HZFCGES4vLgV0",
+  "name": "Azure Open AI account",
+  "type": "azureOpenAiApi",
+  "data": {
+    "apiKey": "",
+    "resourceName": "",
+    "apiVersion": "",
+    "endpoint": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "z8VJT4TelbVg66OM",
+    "projectName": "Ethan Stallings <estallings@axosbank.com>",
+    "personalEmail": "estallings@axosbank.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "w8QrGwSExRsHr9xa",
+  "name": "Microsoft Outlook account 2",
+  "type": "microsoftOutlookOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "csrfSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

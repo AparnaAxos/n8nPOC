@@ -1,0 +1,15 @@
+{
+  "id": "NDhiVQnJndSSw7hV",
+  "name": "Header Auth account",
+  "type": "httpHeaderAuth",
+  "data": {
+    "name": "",
+    "value": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "uaGai3CoG7YTWyNK",
+  "name": "Azure Open AI account 2",
+  "type": "azureOpenAiApi",
+  "data": {
+    "apiKey": "",
+    "resourceName": "",
+    "endpoint": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "BWqwjWZpOuKRyhsa",
+    "projectName": "Arshan Yaribakht <arshan.yaribakht@axosbank.com>",
+    "personalEmail": "arshan.yaribakht@axosbank.com"
+  }
+}

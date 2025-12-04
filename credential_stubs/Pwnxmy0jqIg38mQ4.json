@@ -1,0 +1,17 @@
+{
+  "id": "Pwnxmy0jqIg38mQ4",
+  "name": "AX-OCEO-Base64LLM01",
+  "type": "azureOpenAiApi",
+  "data": {
+    "apiKey": "",
+    "resourceName": "",
+    "apiVersion": "",
+    "endpoint": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "5WFM7WXlrjeCRwFr",
+    "projectName": "Doug Werre <dwerre@axosbank.com>",
+    "personalEmail": "dwerre@axosbank.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "4nmoVOuV8JJuhIrL",
+  "name": "Microsoft Graph Security account",
+  "type": "microsoftGraphSecurityOAuth2Api",
+  "data": {
+    "authUrl": "",
+    "clientId": "",
+    "clientSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

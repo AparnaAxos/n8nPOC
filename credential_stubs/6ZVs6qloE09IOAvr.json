@@ -1,0 +1,20 @@
+{
+  "id": "6ZVs6qloE09IOAvr",
+  "name": "Unnamed credential",
+  "type": "oAuth2Api",
+  "data": {
+    "authUrl": "",
+    "accessTokenUrl": "",
+    "clientId": "",
+    "clientSecret": "",
+    "scope": "",
+    "authQueryParameters": "",
+    "authentication": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

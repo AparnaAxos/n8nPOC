@@ -1,0 +1,17 @@
+{
+  "id": "8l3lzpXgYmbnxOVe",
+  "name": "Microsoft Drive account",
+  "type": "microsoftOneDriveOAuth2Api",
+  "data": {
+    "authUrl": "",
+    "accessTokenUrl": "",
+    "clientId": "",
+    "clientSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

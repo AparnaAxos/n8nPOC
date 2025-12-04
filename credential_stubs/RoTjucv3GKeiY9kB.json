@@ -1,0 +1,14 @@
+{
+  "id": "RoTjucv3GKeiY9kB",
+  "name": "Microsoft Teams account 2",
+  "type": "microsoftTeamsOAuth2Api",
+  "data": {
+    "clientSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "1zSznZyfhrvQzA1E",
+    "projectName": "Aparna Ayyalasomayajula <aayyalasomayajula@axosbank.com>",
+    "personalEmail": "aayyalasomayajula@axosbank.com"
+  }
+}

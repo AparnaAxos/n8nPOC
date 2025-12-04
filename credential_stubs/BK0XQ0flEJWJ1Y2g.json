@@ -1,0 +1,15 @@
+{
+  "id": "BK0XQ0flEJWJ1Y2g",
+  "name": "Microsoft Teams account",
+  "type": "microsoftTeamsOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

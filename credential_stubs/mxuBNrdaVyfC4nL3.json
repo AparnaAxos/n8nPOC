@@ -1,0 +1,18 @@
+{
+  "id": "mxuBNrdaVyfC4nL3",
+  "name": "SMTP account 2",
+  "type": "smtp",
+  "data": {
+    "user": "",
+    "password": "",
+    "host": "",
+    "port": 587,
+    "hostName": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "z8VJT4TelbVg66OM",
+    "projectName": "Ethan Stallings <estallings@axosbank.com>",
+    "personalEmail": "estallings@axosbank.com"
+  }
+}

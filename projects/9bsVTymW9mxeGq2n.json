@@ -1,0 +1,16 @@
+{
+  "id": "9bsVTymW9mxeGq2n",
+  "name": "Commercial _ emailMonitoring",
+  "icon": {
+    "type": "icon",
+    "value": "layers"
+  },
+  "description": "Commercial _ emailMonitoring",
+  "type": "team",
+  "owner": {
+    "type": "team",
+    "teamId": "9bsVTymW9mxeGq2n",
+    "teamName": "Commercial _ emailMonitoring"
+  },
+  "variableStubs": []
+}

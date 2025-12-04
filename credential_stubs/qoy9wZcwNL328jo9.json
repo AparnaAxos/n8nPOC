@@ -1,0 +1,18 @@
+{
+  "id": "qoy9wZcwNL328jo9",
+  "name": "Microsoft SQL account",
+  "type": "microsoftSql",
+  "data": {
+    "server": "",
+    "database": "",
+    "user": "",
+    "password": "",
+    "domain": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}

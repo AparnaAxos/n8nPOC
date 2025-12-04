@@ -1,0 +1,12 @@
+{
+  "id": "NvrULkK5LknH9sWg",
+  "name": "Unnamed credential 4",
+  "type": "httpBasicAuth",
+  "data": {},
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "qplxerMj13XRglFZ",
+    "projectName": "John Spencer <jspencer@axosbank.com>",
+    "personalEmail": "jspencer@axosbank.com"
+  }
+}

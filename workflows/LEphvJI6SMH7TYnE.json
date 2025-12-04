@@ -1,0 +1,227 @@
+{
+  "id": "LEphvJI6SMH7TYnE",
+  "name": "Commercial Support - Email Monitoring",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        640,
+        368
+      ],
+      "id": "f35c1884-bf42-4236-be48-8749bfa32869",
+      "name": "When clicking 'Execute workflow'"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 50,
+        "options": {}
+      },
+      "id": "c0fa9a3b-dd17-4475-990e-4f2a5f230765",
+      "name": "Get UNREAD Emails - Files Processing Failed",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "position": [
+        880,
+        368
+      ],
+      "typeVersion": 2,
+      "alwaysOutputData": true,
+      "webhookId": "60a32ac2-9d66-4333-9cc8-bbbf6da026da",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "gtDxl0LzbTdQjPZC",
+          "name": "Microsoft Outlook account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract Environment and Failed Files List from email body\nconst results = [];\n\nfor (const item of items) {\n  const subject = item.json.subject || '';\n  const messageId = item.json.id || '';\n  const from = item.json.from?.emailAddress?.address || 'Unknown';\n  const fromName = item.json.from?.emailAddress?.name || from;\n  const receivedDateTime = item.json.receivedDateTime || 'N/A';\n  const bodyPreview = item.json.bodyPreview || '';\n  const body = item.json.body?.content || bodyPreview;\n  \n  // Double-check subject contains 'files processing failed' (case-insensitive)\n  if (subject.toLowerCase().includes('files processing failed')) {\n    \n    // Extract Environment (handle typo \"Enviroment\" and correct \"Environment\")\n    let environment = 'N/A';\n    const envMatch = body.match(/Enviro?n?ment\\s*:\\s*([\\w]+)/i);\n    if (envMatch) {\n      environment = envMatch[1];\n    }\n    \n    // Extract Failed Files List - get the file path after \"Failed Files List :\"\n    let failedFilesList = 'N/A';\n    const failedFilesMatch = body.match(/Failed Files List\\s*:\\s*([^\\n\\r<]+)/i);\n    if (failedFilesMatch) {\n      failedFilesList = failedFilesMatch[1].trim();\n    }\n    \n    // Extract additional file details from JSON if present\n    let fileStatus = '';\n    let customerFileName = '';\n    let fileDollarAmount = '';\n    let totalErrors = '';\n    \n    const jsonMatch = body.match(/\\{[^{}]*\"FileStatus\"[^{}]*\\}/s);\n    if (jsonMatch) {\n      try {\n        const fileData = JSON.parse(jsonMatch[0]);\n        fileStatus = fileData.FileStatus || '';\n        customerFileName = fileData.CustomerFileName || '';\n        fileDollarAmount = fileData.FileDollarAmount ? `$${Number(fileData.FileDollarAmount).toLocaleString('en-US', {minimumFractionDigits: 2})}` : '';\n        totalErrors = fileData.TotalErrors ? fileData.TotalErrors.toString() : '';\n      } catch (e) {\n        // JSON parse failed, skip\n      }\n    }\n    \n    // Build the HTML message\n    let htmlMessage = `<b>🚨 Files Processing Failed Alert</b><br><br><b>🌐 Environment:</b> ${environment}<br><br><b>📁 Failed Files List:</b><br>${failedFilesList}<br>`;\n    \n    // Add file details if extracted\n    if (fileStatus || customerFileName || fileDollarAmount || totalErrors) {\n      htmlMessage += `<br><b>📋 File Details:</b><br>`;\n      if (fileStatus) htmlMessage += `&nbsp;&nbsp;• Status: ${fileStatus}<br>`;\n      if (customerFileName) htmlMessage += `&nbsp;&nbsp;• Customer File: ${customerFileName}<br>`;\n      if (fileDollarAmount) htmlMessage += `&nbsp;&nbsp;• Dollar Amount: ${fileDollarAmount}<br>`;\n      if (totalErrors) htmlMessage += `&nbsp;&nbsp;• Total Errors: ${totalErrors}<br>`;\n    }\n    \n    htmlMessage += `<br><b>📝 Subject:</b> ${subject}<br><b>📤 From:</b> ${fromName} (${from})<br><b>📅 Received:</b> ${receivedDateTime}`;\n    \n    results.push({\n      json: {\n        messageId,\n        htmlMessage,\n        subject,\n        from,\n        fromName,\n        receivedDateTime,\n        environment,\n        failedFilesList,\n        fileStatus,\n        customerFileName,\n        fileDollarAmount,\n        totalErrors,\n        bodyPreview\n      }\n    });\n  }\n}\n\nreturn results.length > 0 ? results : [{ json: { noResults: true } }];\n"
+      },
+      "id": "68cbc2b8-5458-4de0-afcc-0a22d89c7105",
+      "name": "Format Email Alert",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1120,
+        368
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "condition-1",
+              "leftValue": "={{ $json.messageId }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "filter-node-001",
+      "name": "Filter - Has Results",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        1360,
+        368
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "chatMessage",
+        "chatId": {
+          "__rl": true,
+          "value": "19:meeting_MWY1MTVkMTQtYTRlYS00YjIzLWEwYWEtMTQ5ZjEwNGJlOTQx@thread.v2",
+          "mode": "list",
+          "cachedResultName": "Enterprise Solution Roadmap and Resource Discussion (meeting)",
+          "cachedResultUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_MWY1MTVkMTQtYTRlYS00YjIzLWEwYWEtMTQ5ZjEwNGJlOTQx%40thread.v2/0?tenantId=0d5c6e36-20a4-4a65-8440-e30e781b5bc1"
+        },
+        "message": "={{ $json.htmlMessage }}",
+        "options": {}
+      },
+      "id": "b7c8eea1-5f8d-4e52-aa24-19c6775756ac",
+      "name": "Send Teams Alert",
+      "type": "n8n-nodes-base.microsoftTeams",
+      "position": [
+        1600,
+        368
+      ],
+      "typeVersion": 2,
+      "webhookId": "ab7a63af-002b-45cf-a8e3-748588258c74",
+      "credentials": {
+        "microsoftTeamsOAuth2Api": {
+          "id": "BK0XQ0flEJWJ1Y2g",
+          "name": "Microsoft Teams account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "messageId": "={{ $json.messageId }}",
+        "updateFields": {
+          "isRead": true
+        }
+      },
+      "id": "mark-as-read-001",
+      "name": "Mark Email as Read",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "position": [
+        1840,
+        368
+      ],
+      "typeVersion": 2,
+      "webhookId": "1d19ad17-bff3-4221-872e-641a157baad8",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "gtDxl0LzbTdQjPZC",
+          "name": "Microsoft Outlook account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Commercial Support - Email Monitoring\n\n### How Duplicate Prevention Works\n1. **Only fetches UNREAD emails** with \"files processing failed\" in subject\n2. **After sending Teams alert, marks email as READ**\n3. Next run will skip already-processed (read) emails\n\n### Flow\n1. **Trigger** - Manual (or set up schedule)\n2. **Get UNREAD Emails** - Only unread emails with subject filter\n3. **Format Alert** - Extracts Environment, Failed Files, File Details\n4. **Filter** - Only proceeds if matching emails found\n5. **Send Teams Alert** - Posts formatted alert\n6. **Mark as Read** - Prevents reprocessing\n\n### Email Data Extracted\n- Environment (production/etc)\n- Failed Files List (file path)\n- File Status, Customer File Name\n- Dollar Amount, Total Errors",
+        "height": 520,
+        "width": 540,
+        "color": 7
+      },
+      "id": "e92895e8-a6b3-4726-be81-754da27740e3",
+      "name": "Sticky Note - Instructions",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        -176
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "When clicking 'Execute workflow'": {
+      "main": [
+        [
+          {
+            "node": "Get UNREAD Emails - Files Processing Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get UNREAD Emails - Files Processing Failed": {
+      "main": [
+        [
+          {
+            "node": "Format Email Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Email Alert": {
+      "main": [
+        [
+          {
+            "node": "Filter - Has Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter - Has Results": {
+      "main": [
+        [
+          {
+            "node": "Send Teams Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Teams Alert": {
+      "main": [
+        [
+          {
+            "node": "Mark Email as Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "triggerCount": 0,
+  "versionId": "6fbef250-67e5-45dd-af46-7ced13c72f9c",
+  "owner": {
+    "type": "personal",
+    "projectId": "1zSznZyfhrvQzA1E",
+    "projectName": "Aparna Ayyalasomayajula <aayyalasomayajula@axosbank.com>",
+    "personalEmail": "aayyalasomayajula@axosbank.com"
+  },
+  "parentFolderId": null,
+  "isArchived": false
+}

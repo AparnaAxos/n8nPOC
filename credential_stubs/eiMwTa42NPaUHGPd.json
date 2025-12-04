@@ -1,0 +1,15 @@
+{
+  "id": "eiMwTa42NPaUHGPd",
+  "name": "IMAP account 2",
+  "type": "imap",
+  "data": {
+    "user": "",
+    "password": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "HFqTXJEU2lii4iZi",
+    "projectName": "Andrea Yogue <andrea.bautista@ph.axos.com>",
+    "personalEmail": "andrea.bautista@ph.axos.com"
+  }
+}

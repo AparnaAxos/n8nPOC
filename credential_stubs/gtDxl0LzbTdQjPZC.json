@@ -1,0 +1,17 @@
+{
+  "id": "gtDxl0LzbTdQjPZC",
+  "name": "Microsoft Outlook account 3",
+  "type": "microsoftOutlookOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "useShared": true,
+    "userPrincipalName": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "1zSznZyfhrvQzA1E",
+    "projectName": "Aparna Ayyalasomayajula <aayyalasomayajula@axosbank.com>",
+    "personalEmail": "aayyalasomayajula@axosbank.com"
+  }
+}

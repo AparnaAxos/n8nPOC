@@ -1,0 +1,16 @@
+{
+  "id": "BMqZRGDvsZ4uwb2Z",
+  "name": "LVF nCino - UAT Environment",
+  "type": "salesforceOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "environment": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "5WFM7WXlrjeCRwFr",
+    "projectName": "Doug Werre <dwerre@axosbank.com>",
+    "personalEmail": "dwerre@axosbank.com"
+  }
+}

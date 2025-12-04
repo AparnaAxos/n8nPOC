@@ -1,0 +1,18 @@
+{
+  "id": "nGW82QPHQUYi6llH",
+  "name": "Microsoft SQL account 2",
+  "type": "microsoftSql",
+  "data": {
+    "server": "",
+    "database": "",
+    "user": "",
+    "port": 10157,
+    "allowUnauthorizedCerts": true
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "BWqwjWZpOuKRyhsa",
+    "projectName": "Arshan Yaribakht <arshan.yaribakht@axosbank.com>",
+    "personalEmail": "arshan.yaribakht@axosbank.com"
+  }
+}

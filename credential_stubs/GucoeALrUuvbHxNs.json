@@ -1,0 +1,16 @@
+{
+  "id": "GucoeALrUuvbHxNs",
+  "name": "Microsoft Excel account 2",
+  "type": "microsoftExcelOAuth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "csrfSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "qplxerMj13XRglFZ",
+    "projectName": "John Spencer <jspencer@axosbank.com>",
+    "personalEmail": "jspencer@axosbank.com"
+  }
+}

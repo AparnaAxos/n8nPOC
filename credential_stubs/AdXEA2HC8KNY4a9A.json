@@ -1,0 +1,16 @@
+{
+  "id": "AdXEA2HC8KNY4a9A",
+  "name": "ServiceNow Basic Auth account",
+  "type": "serviceNowBasicApi",
+  "data": {
+    "user": "",
+    "password": "",
+    "subdomain": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "tdZxehzPgzICkVAm",
+    "projectName": "Derek Ihde <dihde@axosbank.com>",
+    "personalEmail": "dihde@axosbank.com"
+  }
+}
